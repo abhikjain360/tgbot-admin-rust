@@ -1,0 +1,1 @@
+web: TELOXIDE_TOKEN=<enter your token here> ./target/release/pae-tgbot
