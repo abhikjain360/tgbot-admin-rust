@@ -236,41 +236,41 @@ async fn main() {
                         msg += " ";
                     }
 
-                    msg += ", welcome to PAE(Physics after Engineering) community!\n\nBriefly introduce yourself to us and go through the rules (bit.ly/PAEguidelines) before asking questions\n\nThere are 4 sub-groups of this main grp.You can click the buttons below this message to join them. You'll also find a collection of books, a welcome gift from our community.\n";
+                    msg += ", welcome !!";
 
                     let markup = InlineKeyboardMarkup::default()
                         .append_row(vec![InlineKeyboardButton::url(
                                 String::from("List to all the Blog Posts"),
-                                String::from("http://physicsafterengineering.blogspot.com/p/all-posts.html")
+                                String::from("http://link1")
                                 )])
                         .append_row(vec![InlineKeyboardButton::url(
                                 String::from("Problem Solving Group"),
-                                String::from("http://telegram.me/PAEproblems")
+                                String::from("http://link2")
                                 ),
                                 InlineKeyboardButton::url(
                                 String::from("Applying Abroad Group"),
-                                String::from("http://telegram.me/PAEms")
+                                String::from("http://link3")
                                 )])
                         .append_row(vec![InlineKeyboardButton::url(
                                 String::from("Pop-Sci Group"),
-                                String::from("http://telegram.me/PAEwtf")
+                                String::from("http://link4")
                                 ),
                                 InlineKeyboardButton::url(
-                                String::from("Bkchdi Group"),
-                                String::from("http://telegram.me/PAEbkchdi")
+                                String::from("Fun Group"),
+                                String::from("http://link5")
                                 )])
                         .append_row(vec![InlineKeyboardButton::url(
                                 String::from("Notes & Material"),
-                                String::from("http://drive.google.com/folderview?id=1PsAAIjxXVkyGGAuICNJ_Vb8CZdoRdq60")
+                                String::from("link6")
                                 )])
                         .append_row(vec![InlineKeyboardButton::url(
                                 String::from("FAQs - Must Read!!"),
-                                String::from("http://bit.ly/PAEFAQ")
+                                String::from("link7")
                                 )]);
                     if message.bot.send_message(message.update.chat_id(), msg).reply_markup(markup).send().await.is_err() {
                         log::info!("unable to send welcome messages!!");
                     }
-                    msg = String::from("\nPhysicsafterengineering.blogspot.com/p/all-posts.html\n\ntelegram.me/PAEproblems\n\ntelegram.me/PAEms\n\ntelegram.me/PAEwtf\n\ntelegram.me/PAEbkchd\n\ndrive.google.com/folderview?id=1PsAAIjxXVkyGGAuICNJ_Vb8CZdoRdq60\n\nbit.ly/PAEFAQ\n");
+                    msg = String::from("\nexit section message\n");
                     if message.bot.send_message(message.update.chat_id(), msg).send().await.is_err() {
                         log::info!("unable to send welcome messages!!");
                     } else {
