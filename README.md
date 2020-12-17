@@ -48,14 +48,14 @@ cp ProcfileExample Procfile
 
 - test locally.
   * release mode
-```
-cargo build --release
-sh -c  "$(cat Procfile | cut -d ':' -f2,3)"
-```
+    ```
+    cargo build --release
+    sh -c  "$(cat Procfile | cut -d ':' -f2,3)"
+    ```
   * debug mode
-```
-TELOXIDE_TOKEN=<enter your token here> cargo run
-```
+    ```
+    TELOXIDE_TOKEN=<enter your token here> cargo run
+    ```
 
 - Stage, commit and push.
 ```
